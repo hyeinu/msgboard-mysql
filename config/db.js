@@ -2,7 +2,7 @@
 //you only need to require it back in
 const mysql = require('mysql')
 
-const db = mysql.createConnection({
+const db = mysql.createConnection(process.env.JAWSDB_URL || { //can take either a string or an object
   host: 'localhost', //where the database is (location url of db)
   user: 'root',
   password: process.env.MYSQL_PASSWORD,
